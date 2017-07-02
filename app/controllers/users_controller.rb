@@ -17,11 +17,16 @@ class UsersController < ApplicationController
     end
   end
 
-  def autentication
-    user = User.new(allowed_params)
-    #method to send twillio the notification to send the authentication message
+  def show
 
   end
+
+  def send_text
+    @user = User.new(params[:phone_number])
+    @user.send_sms(@user.clean_number)
+    redirect_to :back
+  end
+
 
   private
  def allowed_params

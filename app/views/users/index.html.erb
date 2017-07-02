@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @user.username %></h1>
+<h1><%= @user.username  %></h1>
 
 <table class="table">
   <thead>
@@ -19,6 +19,6 @@
   </tbody>
 </table>
 
-<br>
+<%= button_to 'Send', send_path class: "btn btn-primary btn-lg active"%>
 
 <%= link_to 'New User', new_user_path %>
