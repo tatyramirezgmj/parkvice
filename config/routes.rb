@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  root 'users#new'
 
 
   get 'sessions/new'
@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-  get 'notifications/new' 
+  get 'notifications/new'
   post 'notifications/create' => 'notifications#create', as: "sendsms"
 
 

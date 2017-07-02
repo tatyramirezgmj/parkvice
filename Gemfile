@@ -37,6 +37,12 @@ gem 'hirb'
 # to load enviroment variables
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
+# Bootstrap
+gem 'bootstrap-sass'
+
+# Font Awesome for Icons
+gem 'font-awesome-rails'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
