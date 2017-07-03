@@ -18,7 +18,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-# Use postgreSQL as the database for Active Record in Production
+# Use postgreSQL as the database for Active Record 
 gem 'pg'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -37,19 +37,15 @@ gem 'hirb'
 # to load enviroment variables
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
-<<<<<<< HEAD
-group :development do
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-end
-=======
+# group :development do
+# # Use sqlite3 as the database for Active Record
+# gem 'sqlite3'
+# end
 # Bootstrap
 gem 'bootstrap-sass'
 
 # Font Awesome for Icons
 gem 'font-awesome-rails'
-
->>>>>>> origin/master
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
