@@ -1,8 +1,20 @@
+
+<div class="boxed">
+
 <h1>Log In</h1>
 <%= form_tag sessions_path do %>
   <div class="field">
     <%= label_tag :phone_number %><br />
     <%= text_field_tag :phone_number %>
   </div>
-  <div class="actions"><%= submit_tag "Log In" %></div>
+  <!-- <div class="actions"></div>
+</div> -->
 <% end %>
+<div class="button">
+			<div class="submit"><h3>Submit</h3><%= submit_tag "Log In" %></div>
+			<div class="arrow">
+				<div class="top line"></div>
+				<div class="bottom line"></div>
+			</div>
+		</div>
+		<p class="instructions">Hover and then click<p>
