@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     @user = User.new(allowed_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to dashbord_path, notice: "Thank you for singning up. You will receive our nothifications, through text message."
+      redirect_to dashbord_path, notice: "Thank you for signing up. You will receive our notifications, through text message."
     else
       render "new"
     end
