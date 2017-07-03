@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  root 'user#new'
+  # root 'users#new'
+  root 'users#index'#, as: 'dashbord'
 
-  get 'dashbord', to: 'users#index', as: 'dashbord'
+  # get 'dashbord', to: 'users#index', as: 'dashbord'
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'

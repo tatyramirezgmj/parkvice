@@ -1,3 +1,8 @@
+/* line 1, /Users/cristalfernandez/Desktop/wyncode/parkvice/app/assets/stylesheets/users.scss */
+body {
+  background: red;
+  height: 100vh;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -10,22 +15,24 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
+
  */
+
  input {
      line-height: normal;
      background: transparent;
  }
-
- .main-wrapper {
-   padding-right: 15px;
+ 
+ .container-fluid {
+    padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     background-image: url("http://stancebranding.com/wp-content/uploads/2014/08/Blur-3-1024x667.png");
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
  .head-buttons {
@@ -70,4 +77,8 @@ font-family: 'Indie Flower';
   font-family: 'Indie Flower';}
 .error_messages error_messages{
   font-size: 10px;
+}
+
+.container_fluid {
+  justify-content: space-between;
 }
