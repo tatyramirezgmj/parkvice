@@ -10,7 +10,7 @@ class MessageSender
 
   def send_messages
     @phone_numbers.each do |ph|
-      @client.messages.create(:from => twilio_number, :to => ph , :body => "Pay your parking!")
+      @client.messages.create(:from => twilio_number, :to => ph , :body => "This is Parkvice avoiding you a ticket! Parking ticket officer near Wyncode, you can pay here => https://goo.gl/2RLLZc")
     end
   end
 
@@ -19,6 +19,6 @@ class MessageSender
   private
 
   def twilio_number
-    twilio_number = '+19543291001'
+    twilio_number = '+17864602862'
   end
 end

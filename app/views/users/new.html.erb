@@ -2,7 +2,7 @@
   <%= link_to "Sign Up", new_user_path %>
 </div>
 <h1>Sign Up For Parkvice Notifications</h1>
-<%= form_for @user, url: '/apps/parkvice2/send_text' do |f| %>
+<%= form_for @user do |f| %>
 <% if @user.errors.any? %>
 <div class="error_messages">
   <h2>Form is invalid.</h2>
