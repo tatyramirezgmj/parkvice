@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
     # http_basic_authenticate_with :user, :email, :phone_number, :password
+  before_action :authorize
   def index
     @user = current_user
   end
@@ -8,15 +9,17 @@ class UsersController < ApplicationController
     @user= User.new
   end
 
+
   def create
     @user = User.new(allowed_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path, notice: "Thank you for singning up. You will recive our nothifications, through text message."
+      redirect_to root_url, notice: "Thank you for singning up. You will receive our nothifications, through text message."
     else
       render "new"
     end
   end
+
 
   def show
   end
@@ -26,6 +29,7 @@ class UsersController < ApplicationController
     @user.send_sms(@user.clean_number)
     redirect_to :back
   end
+
 
 
   private
