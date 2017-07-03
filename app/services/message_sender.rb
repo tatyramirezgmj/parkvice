@@ -11,6 +11,7 @@ class MessageSender
   def send_messages
     @phone_numbers.each do |ph|
       @client.messages.create(:from => twilio_number, :to => ph , :body => "This is Parkvice avoiding you a ticket! Parking ticket officer near Wyncode, you can pay here => https://goo.gl/2RLLZc")
+
     end
   end
 

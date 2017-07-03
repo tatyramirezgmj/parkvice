@@ -37,10 +37,19 @@ gem 'hirb'
 # to load enviroment variables
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
+<<<<<<< HEAD
 group :development do
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 end
+=======
+# Bootstrap
+gem 'bootstrap-sass'
+
+# Font Awesome for Icons
+gem 'font-awesome-rails'
+
+>>>>>>> origin/master
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
