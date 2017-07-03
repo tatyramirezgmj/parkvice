@@ -18,8 +18,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-# Use postgreSQL as the database for Active Record 
-gem 'pg'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -38,9 +36,19 @@ gem 'hirb'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
 # group :development do
-# # Use sqlite3 as the database for Active Record
+# # # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # end
+
+
+# Use postgreSQL as the database for Active Record in Production
+group :production do
+  gem 'pg'
+end
+
+group :production do
+  gem 'rails_12factor'
+end
 # Bootstrap
 gem 'bootstrap-sass'
 
