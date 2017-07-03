@@ -8,7 +8,8 @@ class UsersController < ApplicationController
   def new
     @user= User.new
   end
-  
+
+
   def create
     @user = User.new(allowed_params)
     if @user.save
@@ -18,6 +19,18 @@ class UsersController < ApplicationController
       render "new"
     end
   end
+
+
+  def show
+  end
+
+  def send_text
+    @user = User.new(params[:phone_number])
+    @user.send_sms(@user.clean_number)
+    redirect_to :back
+  end
+
+
 
   private
  def allowed_params
