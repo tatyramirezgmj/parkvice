@@ -1,43 +1,47 @@
-<body class="sing_in">
-<div class="sign">
-  <h1>Parkvice</h1>
-  <h1>No more ticket</h1>
+<div class="register">
 
-  <%= form_for @user do |f| %>
-    <% if @user.errors.any? %>
-      <div class="error_messages">
-        <h2>Form is invalid</h2>
-        <ul>
-          <% @user.errors.full_messages.each do |message|%>
-          <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+  <body class="sing_in">
+  <div class="sign">
+    <img src="logo1.jpg" alt="logo1">
+    <h1>Parkvice</h1>
+    <h1>No more parking tickets</h1>
 
-<div class="field">
-  <%= f.label :username %> <br>
-  <%= f.text_field :username %>
-</div>
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Please complete form</h2>
+          <ul>
+            <% @user.errors.full_messages.each do |message|%>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-<div class="field">
-  <%= f.label :phone_number%> <br>
-  <%= f.text_field :phone_number %>
-</div>
-<div class="field">
-  <%= f.label :email %> <br>
-  <%= f.text_field :email %>
-</div>
-<div class="field">
-  <%= f.label :password %> <br>
-  <%= f.password_field :password %>
-</div>
-<div class="field">
-  <%= f.label :password_confirmation %> <br>
-  <%= f.password_field :password_confirmation %>
-</div>
-<br>
-<div class="actions text-center">
-  <%= f.submit "Sign Up", class: 'btn btn-default' %>
+  <div class="field">
+    <%= f.label :username %> <br>
+    <%= f.text_field :username %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number%> <br>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :email %> <br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %> <br>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %> <br>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <br>
+  <div class="actions text-center">
+    <%= f.submit "Sign Up", class: 'btn btn-default' %>
+    </div>
 </div>
 <% end %>
