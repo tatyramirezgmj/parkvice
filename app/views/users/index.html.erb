@@ -1,9 +1,12 @@
+<div class= "user_page">
+
+
 <p id="notice"><%= notice %></p>
 
 <h1><%= @user.username  %></h1>
 
-<table class="table">
-  <thead>
+<table class="table-responsive">
+  <thead class= "table">
     <tr>
       <th>Phone number</th>
       <th>Email</th>
@@ -22,3 +25,4 @@
 
 <%= button_to 'Send', sendsms_path , class: "btn btn-primary btn-lg active"%>
 <%= link_to 'New User', new_user_path %>
+</div>
