@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   root 'users#new'
 
   get 'dashbord', to: 'users#index' , as: 'dashbord'
-# post ''
 
   # get 'dashbord', to: 'users#index', as: 'dashbord'
   get 'signup', to: 'users#new', as: 'signup'
