@@ -4,7 +4,6 @@
   <title>Parkvice2</title>
   <%= csrf_meta_tags %>
 
-<link href="https://fonts.googleapis.com/css?family=Dosis|Indie+Flower|Open+Sans" rel="stylesheet">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -12,20 +11,27 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body class="container-fluid main-wrapper">
-  <div id="user_header">
-    <% if current_user %>
-      <%= link_to 'Logout', logout_path %>
-    <% else %>
-      <div class="head-buttons">
-        <button type="button" class="btn btn-default btn-xs"><%= link_to 'Get Alert', signup_path %></button>
-        <button type="button" class="btn btn-default btn-xs"><%= link_to "Log In", login_path %></button>
+  <body>
+    <div id="user_header">
+        <nav class="navbar navbar-inverse navy">
+          <% if current_user %>
+          <%= link_to 'Logout', logout_path, class:"glyphicon glyphicon-log-out logout1" %>
+          <% else %>
+          <div class="head-buttons">
+
+            <%= link_to 'Register', signup_path, class:"register1" %>
+            <%= link_to "Log In", login_path, class:"register1" %>
+
+          </nav>
 
       </div>
+        </div>
     <% end %>
   </div>
   <%= yield %>
