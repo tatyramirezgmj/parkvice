@@ -15,26 +15,26 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  Rails.application.config.assets.precompile += %w( application.css )
+  <link rel="stylesheet" href="./stylesheets/application.css">
 </head>
 
-<body>
-  <div id="user_header">
-    <nav class="navbar navbar-inverse navy">
-      <% if current_user %>
-      <%= link_to 'Logout', logout_path, class:"glyphicon glyphicon-log-out logout1" %>
-      <% else %>
-      <div class="head-buttons">
+  <body>
+    <div id="user_header">
+        <nav class="navbar navbar-inverse navy">
+          <% if current_user %>
+          <%= link_to 'Logout', logout_path, class:"glyphicon glyphicon-log-out logout1" %>
+          <% else %>
+          <div class="head-buttons">
 
-        <%= link_to 'Register', signup_path, class:"register1" %>
-        <%= link_to "Log In", login_path, class:"register1" %>
+            <%= link_to 'Register', signup_path, class:"register1" %>
+            <%= link_to "Log In", login_path, class:"register1" %>
 
-      </nav>
+          </nav>
 
-    </div>
+      </div>
+        </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
-<%= yield %>
+  <%= yield %>
 </body>
 </html>
