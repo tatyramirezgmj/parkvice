@@ -22,6 +22,8 @@
         <nav class="navbar navbar-inverse navy">
           <% if current_user %>
           <%= link_to 'Logout', logout_path, class:"glyphicon glyphicon-log-out logout1" %>
+          <%= link_to 'Dashboard', sessions_path, class:"glyphicon glyphicon-user logout1" %>
+            <%= link_to 'Register', new_user_path, class: "	glyphicon glyphicon-plus logout1"%>
           <% else %>
           <div class="head-buttons">
 
