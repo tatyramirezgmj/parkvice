@@ -24,13 +24,13 @@
     border-radius: 50px;
     font-size: 24px;
     line-height: 1.33;
-    /* background-color: black; */
     background: black;
     opacity: 0.7;
-    color: rgb(93, 174, 200);
+    color: white;
     box-shadow: 4px 6px 0 2px rgb(93, 174, 200);
     border-color: black;
     margin-bottom: 50px;
+    margin-top: 30px;
 }
 .btn-circle {
     width: 30px;
