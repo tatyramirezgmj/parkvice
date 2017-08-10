@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app was built for Friends and Family project in Wyncode Academy.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Parkvice is a web app develop in Ruby on Rails 5. Which uses bcrypt gem and Twilio’s API to send the user that subscribe an alert when the parking police officer is near Wyncode.
